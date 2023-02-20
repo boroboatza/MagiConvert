@@ -19,7 +19,8 @@ namespace MagiConvert
 		}
 
         private void ButtonBrowse_Click(object sender, EventArgs e)
-        {          
+        {
+            labelDone.Text = "";
             openFileDialog = new OpenFileDialog
             {
 
@@ -46,6 +47,7 @@ namespace MagiConvert
 
         private void RadioButtonBMP_CheckedChanged(object sender, EventArgs e)
         {
+            labelDone.Text = "";
             checkBoxTransparent.Checked = false;
             checkBoxTransparent.Enabled = false;
             format = ".bmp";
@@ -54,6 +56,7 @@ namespace MagiConvert
 
         private void RadioButtonDIB_CheckedChanged(object sender, EventArgs e)
         {
+            labelDone.Text = "";
             checkBoxTransparent.Checked = false;
             checkBoxTransparent.Enabled = false;
             format = ".dib";
@@ -62,6 +65,7 @@ namespace MagiConvert
 
         private void RadioButtonICO_CheckedChanged(object sender, EventArgs e)
         {
+            labelDone.Text = "";
             checkBoxTransparent.Enabled = true;
             format = ".ico";
             GetFormat();
@@ -69,6 +73,7 @@ namespace MagiConvert
 
         private void RadioButtonJPE_CheckedChanged(object sender, EventArgs e)
         {
+            labelDone.Text = "";
             checkBoxTransparent.Checked = false;
             checkBoxTransparent.Enabled = false;
             format = ".jpe";
@@ -77,6 +82,7 @@ namespace MagiConvert
 
         private void RadioButtonJPEG_CheckedChanged(object sender, EventArgs e)
         {
+            labelDone.Text = "";
             checkBoxTransparent.Checked = false;
             checkBoxTransparent.Enabled = false;
             format = ".jpeg";
@@ -85,6 +91,7 @@ namespace MagiConvert
 
         private void RadioButtonJPG_CheckedChanged(object sender, EventArgs e)
         {
+            labelDone.Text = "";
             checkBoxTransparent.Checked = false;
             checkBoxTransparent.Enabled = false;
             format = ".jpg";
@@ -93,6 +100,7 @@ namespace MagiConvert
 
         private void RadioButtonTIF_CheckedChanged(object sender, EventArgs e)
         {
+            labelDone.Text = "";
             checkBoxTransparent.Checked = false;
             checkBoxTransparent.Enabled = false;
             format = ".tif";
@@ -100,12 +108,14 @@ namespace MagiConvert
         }
         private void RadioButtonPNG_CheckedChanged(object sender, EventArgs e)
         {
+            labelDone.Text = "";
             checkBoxTransparent.Enabled = true;
             format = ".png";
             GetFormat();
         }
         private void RadioButtonTIFF_CheckedChanged(object sender, EventArgs e)
         {
+            labelDone.Text = "";
             checkBoxTransparent.Checked = false;
             checkBoxTransparent.Enabled = false;
             format = ".tiff";
@@ -114,6 +124,7 @@ namespace MagiConvert
 
         private void RadioButtonWEBP_CheckedChanged(object sender, EventArgs e)
         {
+            labelDone.Text = "";
             checkBoxTransparent.Checked = false;
             checkBoxTransparent.Enabled = false;
             format = ".webp";
@@ -126,11 +137,6 @@ namespace MagiConvert
                 outputString = outputString.Remove(outputString.LastIndexOf('.'));
             outputString += format;
             OutputPath.Text = outputString;
-        }
-
-        private void labelDone_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
